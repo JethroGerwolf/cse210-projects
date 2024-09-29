@@ -11,10 +11,11 @@ class Program
         do 
         {
             
-            Console.WriteLine("What would you like to do?\nWright(1):\nDisplay(2):\nSave(3):\nLoad(4):\nExit(5):");
+            Console.WriteLine("What would you like to do?\nWrite Entry(1):\nDisplay(2):\nSave(3):\nLoad(4):\nExit(5):");
             string choice = Console.ReadLine();
             if (choice == "1")
             {
+                
 
                 Console.WriteLine("Would you like a prompt today?\nYes (1): \nNo (2):");
                 string choise = Console.ReadLine();

@@ -25,8 +25,7 @@ class Journal{
     {
         using (StreamWriter outputFile = new StreamWriter(_fileName))
     {
-    // You can add text to the file with the WriteLine method
-    
+        
     
         foreach(Entry i in _entry)
         {
