@@ -25,7 +25,7 @@ class Journal{
     {
         using (StreamWriter outputFile = new StreamWriter(_fileName))
     {
-        
+
     
         foreach(Entry i in _entry)
         {
@@ -37,9 +37,9 @@ class Journal{
     {
 
         _entry.Clear();
-        string filename = "myFile.txt";
+        
     string[] lines = System.IO.File.ReadAllLines(_fileName);
-        int count = 0;
+        
     foreach (string line in lines)
     {
     
