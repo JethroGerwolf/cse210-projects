@@ -6,7 +6,7 @@ class Reference
 
     public Reference()
     {
-        _reference = "James 1:5";
+        _reference = "James 1:5-6";
     }
     public Reference(string NewReference)
     {

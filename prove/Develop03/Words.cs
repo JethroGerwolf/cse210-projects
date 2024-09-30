@@ -20,7 +20,7 @@ class Words
         _numbers = new List<int>();
         
         int _NumberOfWords = _sentence.Count;
-        for (int i = 0; i < _NumberOfWords; i++ )
+       for (int i = 0; i < _NumberOfWords; i++ )
         {
             _numbers.Add(i);
         }
@@ -28,16 +28,23 @@ class Words
 
     public int hidewords()
     {
-        int numbers = _sentence.Count;
+        int numbers = _numbers.Count - 1;
+        if (numbers == -1)
+        {
+            return  _numbers.Count ;
+        }
+        else 
+        {
         Random randomGenerator = new Random();
-        int magicnumber = randomGenerator.Next(0, numbers - 1);
-        _numbers.RemoveAt(magicnumber);
-        
-        string _wordCount = _sentence[magicnumber];
+        int magicnumber = randomGenerator.Next(0, numbers );
+
+        string _wordCount = _sentence[_numbers[magicnumber]];
         int _HideWordCount = _wordCount.Length;
         string _word = new string('_', _HideWordCount);
-        _sentence[magicnumber] = _word;
-        return numbers;
+        _sentence[_numbers[magicnumber]] = _word;
+        _numbers.RemoveAt(magicnumber);
+        return _numbers.Count + 1;
+        }
     }
 
     public void DisplaySentence()
