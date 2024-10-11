@@ -16,19 +16,19 @@ public class Video
         _comments = new List<Comment>();
     }
 
-    // Method to add a comment to the video
+
     public void AddComment(string commenterName, string text)
     {
         _comments.Add(new Comment(commenterName, text));
     }
 
-    // Method to get the number of comments for the video
+
     public int GetNumberOfComments()
     {
         return _comments.Count;
     }
 
-    // Method to return the video details as a string
+
     public override string ToString()
     {
         return $"Title: {_title}\nAuthor: {_author}\nLength: {_length} seconds\nNumber of Comments: {GetNumberOfComments()}";
