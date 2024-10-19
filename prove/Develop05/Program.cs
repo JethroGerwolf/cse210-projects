@@ -1,5 +1,5 @@
-using System;
 
+using System;
 class Program
 {
     static void Main(string[] args)
@@ -11,12 +11,13 @@ while (true)
             Console.WriteLine("1. Breathing Activity");
             Console.WriteLine("2. Reflection Activity");
             Console.WriteLine("3. Listing Activity");
-            Console.WriteLine("4. Quit");
+            Console.WriteLine("4. cat picture");
+            Console.WriteLine("5. Quit");
 
             Console.Write("Choose an activity (1-4): ");
             string choice = Console.ReadLine();
 
-            if (choice == "4")
+            if (choice == "5")
             {
                 Console.WriteLine("Goodbye!");
                 break;
@@ -27,6 +28,7 @@ while (true)
                 "1" => new BreathingActivity(),
                 "2" => new ReflectionActivity(),
                 "3" => new ListingActivity(),
+                "4" => new CatActivity(),
                 _ => null
             };
 
